@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audax Softworks — Bold Software, Built with Intent</title>
+  <meta name="description" content="Audax Softworks builds reactive websites, developer tools, games, and systems. Explore our portfolio of client sites, AI tools, and indie software." />
+  <meta name="author" content="Audax Softworks" />
+  <meta property="og:title" content="Audax Softworks" />
+  <meta property="og:description" content="Bold software. Reactive sites. Tools that ship." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Audax Softworks",
+    "url": "https://letrollologist.github.io/audax-softworks/",
+    "description": "Software studio building reactive websites, developer tools, games, and systems.",
+    "sameAs": ["https://github.com/LeTrollologist", "https://trollologist.itch.io/"]
+  }
+  </script>
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-mark">A</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Audax Softworks home">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">Audax<em>Softworks</em></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">☀</button>
+      <a class="btn btn-ghost magnetic" href="https://github.com/LeTrollologist" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="#work">Work</a>
+    <a href="#stack">Stack</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/LeTrollologist" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        Software studio · Est. 2026
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="line">We build</span>
+        <span class="line gradient-text">bold software</span>
+        <span class="line">that ships.</span>
+      </h1>
+      <p class="hero-lead reveal">
+        Audax Softworks crafts reactive websites, AI-powered tools, indie games,
+        and systems software — with a lean stack and zero bloat.
+      </p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary magnetic" href="#work">Explore our work</a>
+        <a class="btn btn-outline magnetic" href="#contact">Start a project</a>
+      </div>
+      <div class="hero-stats reveal" id="github-stats">
+        <div class="stat">
+          <span class="stat-value" data-stat="repos">—</span>
+          <span class="stat-label">Public repos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value" data-stat="projects">12</span>
+          <span class="stat-label">Showcased projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value" data-stat="categories">6</span>
+          <span class="stat-label">Disciplines</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Everything we've built</h2>
+        <p class="section-desc">Client sites, internal tools, games, plugins, and infrastructure — filter by discipline.</p>
+      </div>
+
+      <div class="filter-bar reveal" role="tablist" aria-label="Filter projects" id="filter-bar"></div>
+
+      <div class="project-grid" id="project-grid" role="list"></div>
+    </section>
+
+    <section class="section section-alt" id="stack">
+      <div class="section-head reveal">
+        <p class="eyebrow">Philosophy</p>
+        <h2>Limited stack.<br />Unlimited craft.</h2>
+        <p class="section-desc">We reach for native web tech, Rust, and Node only when the problem demands it — no framework churn, no dependency bloat.</p>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-card reveal">
+          <div class="stack-icon">◈</div>
+          <h3>Vanilla First</h3>
+          <p>HTML, CSS, and JavaScript for sites that load instantly and animate smoothly — glassmorphism, observers, and canvas effects without React overhead.</p>
+        </article>
+        <article class="stack-card reveal">
+          <div class="stack-icon">⚙</div>
+          <h3>Systems Rust</h3>
+          <p>Axum, Tokio, and SQLite for backends that stay fast and local — Personal OS runs your productivity kernel on your machine.</p>
+        </article>
+        <article class="stack-card reveal">
+          <div class="stack-icon">◎</div>
+          <h3>AI When It Counts</h3>
+          <p>WebSage streams deep site analysis through a local AI bridge — zero cloud API costs, full SSE control over every token.</p>
+        </article>
+        <article class="stack-card reveal">
+          <div class="stack-icon">▲</div>
+          <h3>Ship &amp; Iterate</h3>
+          <p>From itch.io game jams to production client sites — we deploy on GitHub Pages, Render, and wherever the project fits best.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About Audax</p>
+          <h2>Audax <span class="gradient-text">(adj.)</span> — bold, daring.</h2>
+          <p>Audax Softworks is the studio behind reactive client websites like Aristos Property Works and Numa's Space, developer tools like Orion Editor and WebSage, and indie software spanning games, Discord plugins, and network utilities.</p>
+          <p>We believe the best software is opinionated, performant, and built with the smallest stack that gets the job done right.</p>
+          <ul class="about-list">
+            <li>Client &amp; personal web experiences</li>
+            <li>AI-assisted developer tooling</li>
+            <li>Indie games &amp; simulations</li>
+            <li>Discord plugins &amp; desktop utilities</li>
+          </ul>
+        </div>
+        <div class="about-visual reveal">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <code>audax ~/studio</code>
+            </div>
+            <pre class="terminal-body"><span class="t-dim">$</span> audax status
+<span class="t-accent">●</span> aristosPW        <span class="t-green">shipped</span>
+<span class="t-accent">●</span> numa.github.io   <span class="t-green">live</span>
+<span class="t-accent">●</span> Orion-Editor     <span class="t-amber">active</span>
+<span class="t-accent">●</span> WebSage          <span class="t-amber">active</span>
+<span class="t-accent">●</span> Personal OS      <span class="t-amber">active</span>
+<span class="t-accent">●</span> Gloss 'n Glory   <span class="t-green">published</span>
+<span class="t-dim">12 projects · 6 disciplines · 0 bloat</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="contact">
+      <div class="cta-panel reveal">
+        <p class="eyebrow">Let's build</p>
+        <h2>Have a project in mind?</h2>
+        <p>Whether you need a reactive client site, a custom tool, or want to collaborate on something new — reach out through GitHub.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary magnetic" href="https://github.com/LeTrollologist" target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
+          <a class="btn btn-outline magnetic" href="https://trollologist.itch.io/" target="_blank" rel="noopener noreferrer">Games on itch.io</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark sm">A</span>
+        <span>Audax Softworks</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Audax Softworks. Built with vanilla HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-links">
+        <a href="https://github.com/LeTrollologist" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://trollologist.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
